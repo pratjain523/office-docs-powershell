@@ -44,6 +44,15 @@ $r.ClassificationResults
 
 This example lists all sensitive info types, their count, and confidence in the specified text string.
 
+### Example 2
+```powershell
+$r = Test-DataClassification -TextToClassify "Here is the Patient Identifier or SSN: 452-12-1232" -ClassificationNames "U.S. Social Security Number (SSN)"
+$r.ClassificationResults
+
+```
+
+This example lists the count and confidence level of US Social Security Number if found in the specified text string.
+
 ## PARAMETERS
 
 ### -ClassificationNames
